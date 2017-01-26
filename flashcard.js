@@ -53,15 +53,38 @@ function askBasicQuestion() {
 		if(user.userAnswer === correctChoice){
 			console.log("You got it right!");
 			count++
-			// startOverFunction
+			startOverBasic();
 			askBasicQuestion();
 		}else{
 			console.log("You got it wrong, the correct answer is: " + newCard.back);
 			count++;
-			// startOverFunction
+			startOverBasic()
 			askBasicQuestion();
 		}
 	});
+}
+
+function startOverBasic(){
+    if(count === basicCard.basicQuestions.length){
+        inquirer.prompt([
+
+            {
+                type: "confirm",
+                message: "Would you like to play again?",
+                name: "playAgain"
+            }
+
+        ]).then(function(user){
+            if(user.playAgain === true){
+                count = 0;
+                askBasicQuestion();
+            }
+            else {
+                askQuestion();
+            }
+
+        });
+    }
 }
 
 
