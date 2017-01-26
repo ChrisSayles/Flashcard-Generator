@@ -74,50 +74,6 @@ if (count < basicCard.basicQuestions.length) {
   }
 }
 
-// var askCloze = function() {
-// if (count < clozeCards.length) {
-
-//     inquirer.prompt([
-//       {
-//         name: "response",
-//         message: clozeCards[count].text + "____________"
-//       }
-//     ]).then(function(answers) {
-//       if (answers.response === clozeCards[count].cloze) {
-//         console.log("Correct");
-//       } else {
-//         console.log("Wrong.  The correct answer is " + clozeCards[count].fulltext());
-//       }
-      
-//       count++;
-//       askCloze();
-//     });
-//   } else {
-
-//       var endGame = true;
-//       count = 0;
-//       if (endGame === true)
-//         {
-//           inquirer.prompt([
-//             {
-//               type: "confirm",
-//               name: "game",
-//               message: "Do you want to play again?"
-//             }
-//             ]).then(function (answers) {
-//             if(answers.game === true) {
-//               startgame();
-//               endGame = false;
-//             } else {
-//               console.log("See you next time!");
-//             }
-
-//         });
-
-//     }
-
-//   }
-// }
 
 
 var startgame = function () {
