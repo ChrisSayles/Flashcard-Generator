@@ -1,0 +1,17 @@
+console.log("Questions Linked")
+
+
+//Basic Flashcard Questions
+var question1 = new BasicCard("Which group had their first US number one on the Billboard chart in 1965 with 'My Girl'?", "The Temptations");
+var question2 = new BasicCard("Who recorded 'You Are The Sunshine Of My Life'?", "Stevie Wonder");
+var question3 = new BasicCard("The Supremes were one of the sixties most popular groups. Who was the best known lead singer of this famous female trio?", "Dianna Ross");
+var question4 = new BasicCard("Who was the lead singer with Motown group The Miracles in the 1960s?", "Smokey Robinson");
+var question5 = new BasicCard("Too Busy Thinking 'bout My Baby' was a hit single for which Motown artist?", "Marvin Gaye");
+
+var question6 = new ClozeCard("What year did the Jackson 5 leave Motown to sign with Epic Records?", "1975");
+var question7 = new ClozeCard("It was at the 'Motown 25: Yesterday, Today, Forever' special that this artist first publicly performed his moonwalk on national television. Who was this great artist?", "Michael Jackson");
+var question8 = new ClozeCard("Which Motown artist had a hit with, 'What Becomes Of The Brokenhearted'?", "Jimmy Ruffin");
+var question9 = new ClozeCard("In which US city was Motown records originally based?", "Detroit");
+var question10 = new ClozeCard("You and I must make a pact, we must bring salvation back. Where there is love, I'll be there...Was sung by which group ", "Jackson 5");
+var question11 = new ClozeCard("Who founded Motown Records Motown Records?", "Berry Gordy Jr.");
+
