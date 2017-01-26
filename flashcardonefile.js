@@ -48,9 +48,9 @@ if (count < basicCard.basicQuestions.length) {
     });
   } else {
 
-      var endGame = true;
+      var gameOver = true;
       count = 0;
-      if (endGame === true)
+      if (gameOver === true)
         {
           inquirer.prompt([
             {
