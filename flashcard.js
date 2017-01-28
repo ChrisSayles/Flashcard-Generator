@@ -16,10 +16,10 @@ var clozeCard = require("./clozeCard.js");
 function ClozeCard(text,cloze){
   this.text = text;
   this.cloze = cloze;
+}
   this.fullText = function(){
     return this.text + this.cloze;
   }
-}
 var count = 0;
 var score = 0;
 
@@ -92,7 +92,7 @@ if (count < clozeCard.clozeQuestions.length) {
         console.log("You're Groovin!");
         score++;
       } else {
-        console.log("Who's Bad?.  The correct answer is " + clozeCard.clozeQuestions[count].cloze);
+        console.log(clozeCard.clozeQuestions[count].text + " " +clozeCard.clozeQuestions[count].cloze);
       }
       count++;
       askCloze();
