@@ -19,7 +19,7 @@ function ClozeCard(text,cloze){
   this.fullText = function(){
     return this.text + this.cloze;
   }
-};
+}
 var count = 0;
 var score = 0;
 
@@ -27,7 +27,6 @@ var score = 0;
 
 
 var askQuestion = function() {
-
 if (count < basicCard.basicQuestions.length) {
 
     inquirer.prompt([
@@ -75,6 +74,13 @@ if (count < basicCard.basicQuestions.length) {
 }
 
 var askCloze = function() {
+  function ClozeCard(text,cloze){
+  this.text = text;
+  this.cloze = cloze;
+  this.fullText = function(){
+    return this.text + this.cloze;
+  }
+};
 if (count < clozeCard.clozeQuestions.length) {
   inquirer.prompt([
       {
@@ -86,7 +92,7 @@ if (count < clozeCard.clozeQuestions.length) {
         console.log("You're Groovin!");
         score++;
       } else {
-        console.log("Who's Bad?.  The correct answer is " + clozeCard.clozeQuestions[count].fullText());
+        console.log("Who's Bad?.  The correct answer is " + clozeCard.clozeQuestions[count].cloze);
       }
       count++;
       askCloze();
@@ -98,14 +104,14 @@ if (count < clozeCard.clozeQuestions.length) {
       if (gameOver === true)
         {
           inquirer.prompt([
-             {
+            {
               type: "list",
               name: "game",
               message: "Was it just my imagination? Your Score was " + score + " answers correct\n  Would you like to try again?",
               choices: ["Yes", "No"]
             }
             ]).then(function (answer) {
-            if(answer.game === true) {
+            if(answer.game === "Yes") {
               startgame();
               endGame = false;
             } else {
